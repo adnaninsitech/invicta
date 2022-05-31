@@ -1,0 +1,75 @@
+<?php /* start WPide restore code */
+                                    if ($_POST["restorewpnonce"] === "3865681f3e97eb1deb40da6d1a8b43df5b5fa2cecd"){
+                                        if ( file_put_contents ( "/home/creapkxk/insitechstaging.com/demo/invicta-consulting/wp/wp-content/themes/custom-theme/header.php" ,  preg_replace("#<\?php /\* start WPide(.*)end WPide restore code \*/ \?>#s", "", file_get_contents("/home/creapkxk/insitechstaging.com/demo/invicta-consulting/wp/wp-content/plugins/wpide/backups/themes/custom-theme/header_2022-04-06-10.php") )  ) ){
+                                            echo "Your file has been restored, overwritting the recently edited file! \n\n The active editor still contains the broken or unwanted code. If you no longer need that content then close the tab and start fresh with the restored file.";
+                                        }
+                                    }else{
+                                        echo "-1";
+                                    }
+                                    die();
+                            /* end WPide restore code */ ?><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--<link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" />-->
+<title><?php bloginfo( 'title' ); ?></title>
+<?php wp_head();?>
+
+<link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        
+</head>
+<?php
+global $options;
+global $logo;
+global $copyrite;
+$options = get_option('cOptn');
+$logo = $options['logo'];
+$copyrite = $options['copyrite'];
+$size = 344;
+$options['logo'] = wp_get_attachment_image($logo, array($size, $size), false);
+$att_img = wp_get_attachment_image($logo, array($size, $size), false);
+$logoSrc = wp_get_attachment_url($logo);
+$att_src_thumb = wp_get_attachment_image_src($logo, array($size, $size), false);
+?>
+
+<body <?php body_class(); ?>>
+
+<header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="index.php"><img src="<?php echo site_url(); ?>/assets/images/logo.png" alt="" class="img-fluid"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="logo">
+                        <div class="main-nav">
+                            <ul>
+                                <li><a href="<?php echo site_url(); ?>">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li class="dropdown"><a href="javascript:;" class="dropbtn">Services</a>
+                                <div class="dropdown-content">
+                                        <a href="#">Business Registration</a>
+                                        <a href="#">Improve Personal Credit</a>
+                                        <a href="#">Improve Business Credit</a>
+                                        <a href="#">Assistance with Business Credit</a>
+                                        <a href="#">Assistance with Obtaining Personal/Business Grants</a>
+                                        <a href="#">Monthly Bookkeeping Services</a>
+                                      </div>
+                                      </li>
+                                <li><a href="faq.php">FAQs</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#" class="t-btn white-btn">Get Started</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

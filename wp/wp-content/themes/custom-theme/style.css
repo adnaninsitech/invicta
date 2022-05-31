@@ -1,0 +1,166 @@
+/*
+Theme Name: Custom LMS Theme
+Theme URI: None
+Author: Me
+Author URI: None
+Description: Our 2019 default theme is designed to show off the power of the block editor. Requires at least: WordPress 4.9.6
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+*/
+/* section.hm-sec3 a span{
+    position:absolute;
+    top: 225px;
+    right: 317px;
+    font-size: 30px;
+    color: #fff;
+} */
+
+footer ul li {
+    list-style: none;
+}
+
+ul#menu-header-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 36px;
+    height: 70px;
+    align-items: center;
+    /* list-style: none; */
+}
+
+.main-nav li {
+    display: inline;
+    position:relative;
+}
+
+.main-nav li a {
+    color: #fff;
+    font-size: 17px;
+    position: relative;
+}
+
+li#menu-item-95 a {
+   background-color: #fff;
+   color: #1b1d21 !important; 
+   border-radius: 4px;
+   font-weight: bold;
+   text-transform: uppercase;
+   width: 206px;
+   height: 61.5px;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header ul.sub-menu li {
+    display: block;
+}
+
+header ul.sub-menu li a {
+display: table-cell;
+}
+
+
+
+li#menu-item-95 a::after {
+  
+    display:none;
+}
+li#menu-item-95 a:hover {
+  
+    box-shadow: inset 400px 0 0 0 #4594B2;
+    color: #fff!important;
+    border: 1px solid #fff;
+}
+
+ul.sub-menu {position: absolute;
+width: 440px;
+min-height: 120px;
+margin: auto; 
+padding: 10px;
+text-align: left;
+border-radius: 2px;animation: btotreverse 0.5s forwards;}
+
+ul.sub-menu li{   
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;}
+    
+    
+    li.menu-item-has-children:hover ul.sub-menu {
+    animation: btot 0.5s forwards;
+    z-index: 9;
+   left: 3px;
+    top: 27px;
+    }
+
+ul.sub-menu li a{padding: 0;
+font-size: 16px;
+color: #000;
+display: block;
+width: 100%;
+margin: 0px 0 25px;
+font-weight: 400;
+margin:0;
+padding: 10px 0;
+}
+
+
+ul.sub-menu li a:after {
+    display:block !important;
+}
+
+
+
+
+.main-nav li a::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    height: 1px;
+    width: 0;
+    transition: .3s;
+}
+
+.main-nav li a:hover::after {
+    width: 100%;
+}
+
+.main-nav li.current-menu-item a::after {
+    width: 100%;
+}
+header ul.sub-menu li{
+display: block;
+    background: #0000004d;
+    padding-left: 20px;
+padding-right: 20px;
+}
+header ul.sub-menu li:first-child{
+ padding-top: 20px;
+}
+header ul.sub-menu li:last-child{
+ padding-bottom: 20px;
+}
+
+
+.boost-sec-1 .tp-text {
+    text-align: justify;
+    margin: 40px 65px 20px;
+}
+
+@media only screen and (min-width: 992px){
+ li.menu-item-has-children:hover ul.sub-menu{
+     display: inline-block !important ;
+    }
+    
+    ul.sub-menu {
+        display:none !important;
+    }
+}
+
+.links.contact .fa {display: flex;column-gap: 12px;/* font-size: 17px !important; */line-height: 23px;}
+
